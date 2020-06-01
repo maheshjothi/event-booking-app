@@ -1,0 +1,15 @@
+<div class="event-booking-page">
+  <div style="text-align: center;">
+  <h2 class="event-booking-page__heading">{{ event.name }}</h2>
+  <h4 class="event-booking-page__subheading">
+    Number of available seats : {{ event.seatsAvailable }}
+  </h4>
+  </div>
+
+  <mat-card class="event-card">
+    <mat-card-content>
+      <div style="float: left; margin: 10px;"><img mat-card-md-image src="https://images.unsplash.com/{{event.imageSlug}}?fit=crop&w=300&q=80" alt="Photo of {{event.name}}"></div>
+      <app-event-booking-form [event]="event"></app-event-booking-form>
+    </mat-card-content>
+  </mat-card>
+</div>
